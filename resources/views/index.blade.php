@@ -31,13 +31,40 @@
             <a class="navbar-brand d-flex align-items-center text-decoration-none" href="/">
                 <span class="logo-pustaka">JENDELA<span class="logo-titik-kayu">.</span></span>
             </a>
-            <div class="d-flex align-items-center gap-3">
-                <button id="btnToggleTema" class="tombol-tema" title="Ubah Tema Visual">
+            
+            <div class="d-flex align-items-center gap-2">
+                <!-- Tombol Tema Cepat (Desktop) -->
+                <button id="btnToggleTema" class="tombol-tema d-none d-md-flex me-1" title="Ubah Tema Visual">
                     <i class="bi bi-moon-stars" id="ikonTema"></i>
                 </button>
-                <a href="/admin/kurasi" class="btn tombol-admin-nav">
-                    <i class="bi bi-shield-lock me-1"></i> Admin Kurasi
-                </a>
+
+                <!-- Menu Titik Tiga Kebab (3-Dots Dropdown Menu) -->
+                <div class="dropdown">
+                    <button class="btn tombol-titik-tiga" type="button" id="dropdownMenuTitikTiga" data-bs-toggle="dropdown" aria-expanded="false" title="Menu Opsi JENDELA">
+                        <i class="bi bi-three-dots-vertical fs-5"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end menu-dropdown-jendela shadow-lg" aria-labelledby="dropdownMenuTitikTiga">
+                        <li>
+                            <button type="button" class="dropdown-item item-menu-drop d-flex align-items-center gap-2" id="btnToggleTemaDropdown">
+                                <i class="bi bi-moon-stars" id="ikonTemaDropdown"></i>
+                                <span>Ubah Tema Visual</span>
+                            </button>
+                        </li>
+                        <li><hr class="dropdown-divider border-kaca my-1"></li>
+                        <li>
+                            <button type="button" class="dropdown-item item-menu-drop d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#modalTambahKarya">
+                                <i class="bi bi-pencil-square"></i>
+                                <span>Tulis Karya Warga</span>
+                            </button>
+                        </li>
+                        <li>
+                            <a class="dropdown-item item-menu-drop d-flex align-items-center gap-2" href="/admin/kurasi">
+                                <i class="bi bi-shield-lock"></i>
+                                <span>Panel Admin Kurasi</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -374,33 +401,42 @@
             let kategoriFilterAktif = 'semua';
             let kueriPencarian = '';
 
-            // Pengaturan Tema
+            const btnToggleTemaDropdown = document.getElementById('btnToggleTemaDropdown');
+            const ikonTemaDropdown = document.getElementById('ikonTemaDropdown');
+
+            // Pengaturan Tema Visual (Mendukung Tombol Cepat & Menu Titik Tiga)
             const muatTemaPreferensi = () => {
                 const temaTersimpan = localStorage.getItem('theme');
                 const preferensiGelapSystem = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 
-                if (temaTersimpan === 'dark' || (!temaTersimpan && preferensiGelapSystem)) {
+                const isDark = (temaTersimpan === 'dark' || (!temaTersimpan && preferensiGelapSystem));
+                if (isDark) {
                     body.classList.add('theme-dark');
                     if (ikonTema) ikonTema.className = 'bi bi-sun';
+                    if (ikonTemaDropdown) ikonTemaDropdown.className = 'bi bi-sun';
                 } else {
                     body.classList.remove('theme-dark');
                     if (ikonTema) ikonTema.className = 'bi bi-moon-stars';
+                    if (ikonTemaDropdown) ikonTemaDropdown.className = 'bi bi-moon-stars';
                 }
             };
 
-            if (btnToggleTema) {
-                btnToggleTema.addEventListener('click', () => {
-                    if (body.classList.contains('theme-dark')) {
-                        body.classList.remove('theme-dark');
-                        if (ikonTema) ikonTema.className = 'bi bi-moon-stars';
-                        localStorage.setItem('theme', 'light');
-                    } else {
-                        body.classList.add('theme-dark');
-                        if (ikonTema) ikonTema.className = 'bi bi-sun';
-                        localStorage.setItem('theme', 'dark');
-                    }
-                });
-            }
+            const eksekusiToggleTema = () => {
+                if (body.classList.contains('theme-dark')) {
+                    body.classList.remove('theme-dark');
+                    if (ikonTema) ikonTema.className = 'bi bi-moon-stars';
+                    if (ikonTemaDropdown) ikonTemaDropdown.className = 'bi bi-moon-stars';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    body.classList.add('theme-dark');
+                    if (ikonTema) ikonTema.className = 'bi bi-sun';
+                    if (ikonTemaDropdown) ikonTemaDropdown.className = 'bi bi-sun';
+                    localStorage.setItem('theme', 'dark');
+                }
+            };
+
+            if (btnToggleTema) btnToggleTema.addEventListener('click', eksekusiToggleTema);
+            if (btnToggleTemaDropdown) btnToggleTemaDropdown.addEventListener('click', eksekusiToggleTema);
 
             // Pembaca Estimasi Waktu (Read Time) & Kategori CSS
             const hitungEstimasiWaktuBaca = (teks) => {

@@ -719,15 +719,76 @@ body.theme-dark .kategori-lainnya {
     color: var(--warna-teks-utama);
 }
 
-/* Spinner */
-.putar-loading {
-    border: 3px solid var(--warna-pembatas);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border-left-color: var(--warna-senja);
-    animation: putar 0.8s linear infinite;
-    margin: 3rem auto;
+/* =========================================
+   3-DOTS KEBAB MENU NAVBAR (RESPONSIVE PRO)
+   ========================================= */
+.tombol-titik-tiga {
+    background: var(--warna-latar-kartu) !important;
+    border: 1px solid var(--warna-pembatas) !important;
+    color: var(--warna-teks-utama) !important;
+    width: 42px;
+    height: 42px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--efek-transisi) !important;
+    box-shadow: var(--bayangan-halus) !important;
+    padding: 0 !important;
+}
+
+.tombol-titik-tiga:hover,
+.tombol-titik-tiga:focus,
+.tombol-titik-tiga.show {
+    background: var(--warna-dinding) !important;
+    border-color: var(--warna-senja) !important;
+    color: var(--warna-senja) !important;
+    box-shadow: 0 4px 14px rgba(193, 125, 60, 0.25) !important;
+}
+
+.menu-dropdown-jendela {
+    background: var(--warna-latar-kartu) !important;
+    border: 1px solid var(--warna-pembatas) !important;
+    border-radius: 16px !important;
+    padding: 0.5rem !important;
+    min-width: 230px !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-top: 0.5rem !important;
+}
+
+.item-menu-drop {
+    color: var(--warna-teks-utama) !important;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.65rem 1rem !important;
+    border-radius: 10px !important;
+    transition: var(--efek-transisi) !important;
+    background: transparent !important;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.item-menu-drop:hover,
+.item-menu-drop:focus {
+    background: var(--warna-dinding) !important;
+    color: var(--warna-senja) !important;
+}
+
+.item-menu-drop i {
+    font-size: 1.1rem;
+    color: var(--warna-senja);
+}
+
+body.theme-dark .menu-dropdown-jendela {
+    background: #251E17 !important;
+    border-color: #4D3F30 !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
 }
 
 @keyframes putar {
