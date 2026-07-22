@@ -624,36 +624,8 @@
                 });
             }
 
-            // Integrasi REST API Karya Warga Desa (dengan Fallback Kurasi)
-            const karyaFallbackLokal = [
-                {
-                    id: 101,
-                    judul_karya: "Sejarah Asal Usul Desa Pancasila",
-                    nama_penulis: "Mbah Sastro",
-                    kategori: "Sejarah",
-                    isi_karya: "Desa Pancasila didirikan pada tahun 1952 oleh para perintis kemerdekaan dan masyarakat setempat secara gotong royong...",
-                    isi_ringkas: "Desa Pancasila didirikan pada tahun 1952 oleh para perintis kemerdekaan...",
-                    tanggal: "12 Januari 2026"
-                },
-                {
-                    id: 102,
-                    judul_karya: "Panduan Budidaya Lele Bioflok Murni Desa",
-                    nama_penulis: "Karang Taruna Tunas Muda",
-                    kategori: "Artikel UMKM",
-                    isi_karya: "Teknik bioflok terbukti menghemat penggunaan air serta meningkatkan efisiensi pakan ternak lele hingga 30%...",
-                    isi_ringkas: "Teknik bioflok terbukti menghemat penggunaan air serta meningkatkan efisiensi...",
-                    tanggal: "18 Februari 2026"
-                },
-                {
-                    id: 103,
-                    judul_karya: "Senja di Pematang Sawah",
-                    nama_penulis: "Siti Rahma",
-                    kategori: "Puisi",
-                    isi_karya: "Angin berhembus perlahan menyapa padi yang menguning, menggambarkan kedamaian desa tercinta...",
-                    isi_ringkas: "Angin berhembus perlahan menyapa padi yang menguning...",
-                    tanggal: "05 Maret 2026"
-                }
-            ];
+            // Integrasi REST API Karya Warga Desa
+            const karyaFallbackLokal = [];
 
             const muatKaryaWarga = () => {
                 if (loadingKarya) loadingKarya.classList.remove('d-none');
