@@ -916,8 +916,7 @@
                             <div class="wadah-sampul text-center">
                                 <img src="${urlSampul}" alt="${judulTampil}" class="sampul-buku gambar-sampul" onerror="this.src='https://placehold.co/300x420/224C63/ffffff?text=Dokumen+PDF+Desa';">
                             </div>
-                            <span class="lencana-kategori kategori-umkm mb-2 d-inline-block">Dokumen PDF Desa</span>
-                            <h5 class="teks-judul judul-buku mt-1" title="${judulTampil}">${judulTampil}</h5>
+                            <h5 class="teks-judul judul-buku mt-2" title="${judulTampil}">${judulTampil}</h5>
                             <p class="teks-penulis penulis-buku"><i class="bi bi-person me-1"></i>${penulisTampil}</p>
                             <p class="teks-karya-preview">${buku.sinopsis || 'Dokumen / Berkas Panduan Resmi Desa'}</p>
                             <button type="button" class="btn tombol-baca mt-auto w-100 d-flex align-items-center justify-content-center gap-2" onclick="event.stopPropagation(); bacaBukuPdf('${urlPdf}', '${judulEscaped}')">
