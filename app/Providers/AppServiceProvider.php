@@ -26,6 +26,12 @@ class AppServiceProvider extends ServiceProvider
                 @mkdir($folder, 0777, true);
             }
         }
+
+        // Pastikan berkas SQLite tersimpan di dalam folder storage permanen
+        $dbPath = storage_path('database.sqlite');
+        if (!file_exists($dbPath)) {
+            @touch($dbPath);
+        }
     }
 
     /**
@@ -37,8 +43,12 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
-        // Otomatis pastikan akun Admin default ada di database SQLite Railway/Production
+        // Otomatis migrasi & pastikan akun Admin default ada di database SQLite Railway/Production
         try {
+            if (!\Illuminate\Support\Facades\Schema::hasTable('users')) {
+                \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+            }
+
             if (\Illuminate\Support\Facades\Schema::hasTable('users') && \App\Models\User::count() === 0) {
                 \App\Models\User::create([
                     'name' => 'Administrator Karang Taruna',
