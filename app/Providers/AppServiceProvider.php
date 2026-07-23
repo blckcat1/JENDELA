@@ -12,7 +12,20 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Otomatis buat struktur folder storage jika belum ada (saat Volume Railway baru di-mount)
+        $storageFolders = [
+            storage_path('app/public'),
+            storage_path('framework/cache/data'),
+            storage_path('framework/sessions'),
+            storage_path('framework/testing'),
+            storage_path('framework/views'),
+            storage_path('logs'),
+        ];
+        foreach ($storageFolders as $folder) {
+            if (!is_dir($folder)) {
+                @mkdir($folder, 0777, true);
+            }
+        }
     }
 
     /**
