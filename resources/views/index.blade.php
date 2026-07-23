@@ -741,7 +741,6 @@
                     const htmlKartu = `
                         <div class="kartu-karya" ${urlPdf ? `onclick="bacaBukuPdf('${urlPdf}', '${judulEscaped}')" style="cursor: pointer;"` : ''}>
                             ${wadahSampulHtml}
-                            <span class="lencana-kategori ${kelasKat}">${kategoriTampil}</span>
                             <h5 class="teks-judul mt-2">${judulTampil}</h5>
                             <p class="teks-penulis"><i class="bi bi-pen me-1"></i>${penulisTampil}</p>
                             <p class="teks-karya-preview">${ringkasTampil}</p>
