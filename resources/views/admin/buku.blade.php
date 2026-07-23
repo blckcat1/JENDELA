@@ -66,7 +66,7 @@
 
         <!-- Tombol Aksi Tambah Buku -->
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h4 class="fw-bold m-0 text-teal"><i class="bi bi-collection-play me-2"></i>Daftar Buku Desa (${{ count($bukuDesaList) }})</h4>
+            <h4 class="fw-bold m-0 text-teal"><i class="bi bi-collection-play me-2"></i>Daftar Buku Desa ({{ count($bukuDesaList) }})</h4>
             <button class="btn tombol-kirim btn-sm rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#modalTambahBuku">
                 <i class="bi bi-plus-circle me-1"></i> Unggah Buku Desa Baru
             </button>

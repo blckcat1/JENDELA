@@ -71,12 +71,12 @@
             <ul class="nav nav-tabs navigasi-tab" id="tabAdmin" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="tab-menunggu" data-bs-toggle="tab" data-bs-target="#panel-menunggu" type="button" role="tab" aria-controls="panel-menunggu" aria-selected="true">
-                        <i class="bi bi-clock-history me-2"></i>Menunggu Persetujuan (${{ count($karyaMenunggu) }})
+                        <i class="bi bi-clock-history me-2"></i>Menunggu Persetujuan ({{ count($karyaMenunggu) }})
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="tab-terpublikasi" data-bs-toggle="tab" data-bs-target="#panel-terpublikasi" type="button" role="tab" aria-controls="panel-terpublikasi" aria-selected="false">
-                        <i class="bi bi-check-circle me-2"></i>Terpublikasi (${{ count($karyaDisetujui) }})
+                        <i class="bi bi-check-circle me-2"></i>Terpublikasi ({{ count($karyaDisetujui) }})
                     </button>
                 </li>
             </ul>
