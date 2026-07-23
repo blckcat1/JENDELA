@@ -61,7 +61,7 @@
                                value="{{ old('email') }}" 
                                required 
                                autofocus 
-                               placeholder="admin@jendela.desa.id">
+                               placeholder="Masukkan email admin...">
                     </div>
                 </div>
 
