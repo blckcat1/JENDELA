@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>JENDELA - Jejaring Edukasi & Literasi Digital Desa</title>
+    <title>JENDELA - E-Pustaka Digital Desa Doko, Kec. Ngasem, Kab. Kediri</title>
     
     <!-- Google Fonts: Playfair Display, Source Serif 4, DM Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +75,7 @@
         <!-- Header Sambutan Utama -->
         <header class="hero-jendela">
             <h1 class="judul-jendela">Jejaring Literasi & Karya Warga</h1>
-            <p class="subjudul-jendela">Ruang baca digital desa — membaca pengetahuan dunia dan mengabadikan tulisan lokal.</p>
+            <p class="subjudul-jendela">Ruang baca digital Desa Doko, Kec. Ngasem, Kab. Kediri — membaca pengetahuan dunia dan mengabadikan tulisan lokal.</p>
         </header>
 
         <!-- SIGNATURE ELEMENT: Bingkai Jendela (Window Pane Navigator) -->
@@ -83,9 +83,9 @@
             <div class="bingkai-jendela-frame">
                 <!-- Panel Kiri: Karya Warga Desa -->
                 <button type="button" class="panel-jendela panel-karya-warga aktif" id="tombol-panel-karya" onclick="pilihPanel('karya')">
-                    <span class="jendela-label-fungsi">KOLEKSI LOKAL</span>
+                    <span class="jendela-label-fungsi">KOLEKSI LOKAL DOKO</span>
                     <h3 class="jendela-panel-judul">Karya Warga Desa</h3>
-                    <p class="jendela-panel-ket">Cerita, sejarah, puisi, dan wirausaha tulisan tangan warga.</p>
+                    <p class="jendela-panel-ket">Cerita, sejarah, puisi, dan wirausaha tulisan tangan warga Desa Doko.</p>
                 </button>
 
                 <!-- Panel Tengah: Pustaka Umum (Google Books API) -->
@@ -108,7 +108,7 @@
         <section class="area-pencarian-jendela">
             <div class="wadah-rel-pencarian">
                 <i class="bi bi-search ikon-cari-jendela"></i>
-                <input type="text" id="inputCariBuku" class="input-pencarian-jendela" placeholder="Cari karya warga, pustaka umum, buku sains & teknologi, atau dokumen desa...">
+                <input type="text" id="inputCariBuku" class="input-pencarian-jendela" placeholder="Cari karya warga Doko, pustaka umum, buku sains & teknologi, atau dokumen desa...">
             </div>
         </section>
 
@@ -134,7 +134,7 @@
             <!-- Empty State Berpengumuman Desa -->
             <div id="kosong-karya" class="papan-pengumuman-kosong d-none">
                 <p class="teks-papan-desa">
-                    "Papan karya desa ini masih kosong. Kalau Pak RT Anda punya cerita masa lalu kampung ini, atau Ibu warung menulis resep leluhur — inilah tempatnya. Klik tombol 'Tulis Karya' di bawah."
+                    "Papan karya Desa Doko ini masih kosong. Kalau Pak RT atau warga Doko punya cerita masa lalu kampung ini, resep warisan, atau puisi — inilah tempatnya. Klik tombol 'Tulis Karya' di bawah."
                 </p>
                 <button class="btn tombol-baca" data-bs-toggle="modal" data-bs-target="#modalTambahKarya">
                     <i class="bi bi-pencil me-1"></i> Tulis Karya Pertama
@@ -190,8 +190,8 @@
 
         <!-- SEKSI 3: RAK BUKU DESA (DOCUMENT / PDF COLLECTION) -->
         <section class="seksi-buku-desa">
-            <h2 class="judul-seksi-desa">Dokumen & Buku Desa (PDF)</h2>
-            <p class="sub-seksi-desa">Modul pelatihan, laporan tahunan desa, dan buku panduan resmi karangan warga.</p>
+            <h2 class="judul-seksi-desa">Dokumen & Buku Desa Doko (PDF)</h2>
+            <p class="sub-seksi-desa">Modul pelatihan, laporan APBDes, dan buku panduan resmi Desa Doko, Kec. Ngasem, Kab. Kediri.</p>
             
             <div id="loading-buku-desa" class="putar-loading d-none"></div>
             <div id="daftar-buku-desa" class="tata-letak-grid">
@@ -201,10 +201,16 @@
             <!-- Empty State Buku Desa PDF -->
             <div id="kosong-buku-desa" class="papan-pengumuman-kosong d-none bg-transparent border-secondary text-light">
                 <p class="teks-papan-desa text-light">
-                    "Rak dokumen desa masih kosong. Berkas panduan, modul UMKM, atau laporan tahunan desa dari admin akan muncul di sini."
+                    "Rak dokumen Desa Doko masih kosong. Berkas panduan, modul UMKM, atau laporan tahunan dari Pemerintah Desa Doko akan muncul di sini."
                 </p>
             </div>
         </section>
+
+        <!-- FOOTER BRANDING RESMI DESA DOKO -->
+        <footer class="text-center py-4 my-5 border-top border-secondary text-muted small" style="font-family: var(--font-body);">
+            <p class="mb-1 fw-semibold text-secondary">JENDELA &bull; E-Pustaka & Literasi Digital Desa Doko</p>
+            <p class="mb-0">Kecamatan Ngasem, Kabupaten Kediri &bull; Dipersembahkan oleh Karang Taruna & Pemerintah Desa Doko</p>
+        </footer>
 
     </main>
 

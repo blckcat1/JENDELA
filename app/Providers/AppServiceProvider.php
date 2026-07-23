@@ -51,10 +51,10 @@ class AppServiceProvider extends ServiceProvider
 
             if (\Illuminate\Support\Facades\Schema::hasTable('users') && \App\Models\User::count() === 0) {
                 \App\Models\User::create([
-                    'name' => 'Administrator Karang Taruna',
+                    'name' => 'Administrator Karang Taruna Desa Doko',
                     'email' => 'admin@jendela.desa.id',
                     'password' => \Illuminate\Support\Facades\Hash::make('password123'),
-                    'peran_pengguna' => 'Admin Perpustakaan',
+                    'peran_pengguna' => 'Admin Perpustakaan Desa Doko',
                 ]);
             }
         } catch (\Throwable $e) {

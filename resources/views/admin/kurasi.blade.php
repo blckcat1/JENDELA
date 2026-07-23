@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>JENDELA - Panel Kurasi Admin</title>
+    <title>JENDELA - Panel Kurasi Admin Desa Doko</title>
     
     <!-- Google Fonts: Playfair Display, Source Serif 4, DM Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,8 +50,8 @@
         
         <!-- Header Sambutan -->
         <header class="text-center my-4">
-            <h1 class="fw-bold mb-2">Panel Kurasi Karya Warga</h1>
-            <p class="text-muted fs-6">Tinjau, setujui publikasi, atau hapus kiriman naskah kearifan lokal warga desa.</p>
+            <h1 class="fw-bold mb-2">Panel Kurasi Karya Warga Desa Doko</h1>
+            <p class="text-muted fs-6">Tinjau, setujui publikasi, atau kelola kiriman naskah kearifan lokal warga Desa Doko, Kec. Ngasem, Kab. Kediri.</p>
         </header>
 
         <!-- Bingkai Navigasi Utama Admin (Unified Page Switcher) -->

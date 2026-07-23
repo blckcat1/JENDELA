@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JENDELA - Login Admin Panel</title>
+    <title>JENDELA - Login Admin Panel Desa Doko</title>
     
     <!-- Google Fonts: Playfair Display, Source Serif 4, DM Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
                 <span class="logo-pustaka fs-2">JENDELA<span class="logo-titik-kayu">.</span></span>
             </a>
             <h3 class="fw-bold mt-1 mb-1" style="font-family: var(--font-display);">Login Administrator</h3>
-            <p class="text-muted small" style="font-family: var(--font-body); font-style: italic;">Panel Khusus Karang Taruna & Perangkat Desa</p>
+            <p class="text-muted small" style="font-family: var(--font-body); font-style: italic;">Panel Khusus Karang Taruna & Perangkat Desa Doko, Kec. Ngasem, Kab. Kediri</p>
         </div>
 
         <!-- Bingkai Kartu Login Kertas Desa -->

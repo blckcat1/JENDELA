@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>JENDELA - Panel Unggah Buku Desa</title>
+    <title>JENDELA - Panel Unggah Buku Desa Doko</title>
     
     <!-- Google Fonts: Playfair Display, Source Serif 4, DM Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,8 +48,8 @@
         
         <!-- Header Sambutan -->
         <header class="text-center my-4">
-            <h1 class="fw-bold mb-2">Panel Katalog Buku Desa (E-Book/PDF)</h1>
-            <p class="text-muted fs-6">Kelola modul edukasi, laporan desa, atau buku saku UMKM warga berbentuk PDF.</p>
+            <h1 class="fw-bold mb-2">Panel Unggah Buku & Dokumen Desa Doko</h1>
+            <p class="text-muted fs-6">Kelola modul edukasi, laporan APBDes, atau buku saku UMKM warga Desa Doko, Kec. Ngasem, Kab. Kediri.</p>
         </header>
 
         <!-- Bingkai Navigasi Utama Admin (Unified Page Switcher) -->
